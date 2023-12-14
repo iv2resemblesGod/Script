@@ -1,0 +1,115 @@
+#!name=自用 & 模块
+#!desc=Module
+#!author=hairihan
+
+[MITM]
+
+hostname = %APPEND% ios-*.prod.ftl.netflix.com, ios.prod.ftl.netflix.com, api.m.jd.com, m.baidu.com, boxer.baidu.com, www.baidu.com, api.tipsoon.com, biz.cyapi.cn, wrapper.cyapi.cn, orders.kfc.com.cn, dynamicad.kfc.com.cn, res.kfc.com.cn, res.pizzahut.com, 3pp.starbucks.com.cn, webchatapp.fcbox.com, dsp.fcbox.com, api.hellobike.com, ucmp.sf-express.com, vod-movie.maoyan.com, api.maoyan.com, ad.maoyan.com, wx.maoyan.com, h5.youzan.com, mcs-mimp-web.sf-express.com, ucmp-static.sf-express.com, ucmp.sf-express.com, member.alipan.com, asia-east2-slidebox-ios-prod.cloudfunctions.net, api.polaxiong.com, mobile.flightradar24.com, cloud.189.cn, zt-app.go189.cn, z.onewo.com, miniapp.sexytea2013.com, my.getslopes.com, apis.folidaymall.com, api.revenuecat.com
+
+[Map Local]
+
+# 百度搜索
+^https?:\/\/(www|m)\.baidu\.com\/?($|\?(from=\w{8,9}|tn=&from=)) data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/baidu.html" header="Content-Type: text/html; charset=utf-8"
+
+# 彩云天气
+^https:\/\/api\.caiyunapp\.com\/v1\/activity\? data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
+^https:\/\/wrapper\.cyapi\.cn\/v1\/activity\? data="https://raw.githubusercontent.com/axcsz/Collect/master/Script/sichuandianxinshouye.json"
+
+[Script]
+
+# baiduNoRedirect
+baiduNoRedirect = type=http-response,pattern=^https:\/\/boxer\.baidu\.com\/scheme\?scheme,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/baiduNoRedirect.js, timeout=60
+
+# 彩云天气
+彩云天气 = type=http-response,pattern=^https:\/\/biz\.cyapi\.cn\/(p\/v1\/vip_info|v2\/user),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/caiyun.js
+彩云云图 = type=http-request,pattern=^https:\/\/wrapper\.cyapi\.cn\/v1\/(satellite|nafp\/origin_images),requires-body=0,script-path=https://raw.githubusercontent.com/wf021325/qx/master/js/caiyun.js,script-update-interval=0
+
+# 茶颜悦色
+茶颜悦色 = type=http-response,pattern=^https:\/\/miniapp\.sexytea2013\.com\/cms\/slot\/queryByCodes\?codes=INDEX_TOP_BANNER,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cyys.js,script-update-interval=0
+
+# 京东比价
+京东比价 = type=http-response,requires-body=1,pattern=^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig),script-path=https://raw.githubusercontent.com/Keywos/Rule/main/JS/Jdbj.js
+
+# 奈飞评分
+奈飞评分 = type=http-request,pattern=^https?:\/\/ios(-.*)?\.prod\.ftl\.netflix\.com\/iosui\/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js
+奈飞评分 = type=http-response,requires-body=1,pattern=^https?:\/\/ios(-.*)?\.prod\.ftl\.netflix\.com\/iosui\/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js
+
+# Slidebox
+Slidebox = type=http-response,pattern=^https:\/\/asia-east2-slidebox-ios-prod\.cloudfunctions\.net\/api_v1$,requires-body=true,max-size=3145728,timeout=60,script-path=https://raw.githubusercontent.com/wf021325/qx/master/js/slidebox.js,script-update-interval=0
+
+# Flightradar24
+Flightradar24 = type=http-response,pattern=^https:\/\/mobile\.flightradar24\.com\/mobile\/(user-session|subscribe),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/Flightradar24.js,script-update-interval=0
+
+# Polarr
+Polarr = type=http-response,pattern=^https?:\/\/api\.polaxiong\.com\/.+\/payments\/(profiles\/.+\/subscription|appleiap\/receipts\/confirmation),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/pola.js,script-update-interval=0
+
+# Slopes
+Slopes = type=http-response,pattern=https://my.getslopes.com/api/v2/account,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/Slopes.js,script-update-interval=0
+
+# RevenueCat
+RevenueCat = type=http-request,pattern=^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$),requires-body=0,script-path=https://gist.githubusercontent.com/ddgksf2013/dbb1695cd96743eef18f3fac5c6fe227/raw/revenuecat.js,script-update-interval=0
+
+RevenueCat = type=http-response,pattern=^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$),requires-body=1,max-size=0,script-path=https://gist.githubusercontent.com/ddgksf2013/dbb1695cd96743eef18f3fac5c6fe227/raw/revenuecat.js,script-update-interval=0
+
+# ThomasCook
+ThomasCook = type=cron,cronexp=15 10 * * *,timeout=60,script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/ThomasCook.js,script-update-interval=0
+
+ThomasCook = type=http-request,pattern=^https:\/\/apis\.folidaymall\.com\/online\/capi\/uc\/getCount,requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/ThomasCook.js
+
+# 网上国网
+网上国网 = type=cron,cronexp=0 5 21 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/95598/95598.js,timeout=60,script-update-interval=0
+
+# 阿里云盘签到
+阿里云盘签到 = type=cron,cronexp=0 10 0 * * ?,wake-system=1,script-path=https://raw.githubusercontent.com/lowking/Scripts/master/ali/aliYunPanCheckIn.js
+
+阿里云盘签到cookie = requires-body=1,type=http-response,pattern=https:\/\/auth.(aliyundrive|alipan).com\/v2\/account\/token,script-path=https://raw.githubusercontent.com/lowking/Scripts/master/ali/aliYunPanCheckIn.js
+
+[URL Rewrite]
+
+# > 阿里云盘
+^https:\/\/member\.alipan\.com\/v2\/activity\/sign_in_info - reject
+
+# > Bilibili
+(?=.*(hdslb\.com.*(\.zip|\.mp4)))^((?!(hdslb\.com\/bfs\/app-static\/)).)*$ - reject
+(?=resource\?resourceUrl|upos\-sz\-staticcos) - reject
+
+# > 必胜客 微信小程序净化
+^https:\/\/res\.pizzahut\.com\.cn\/CRM - reject
+
+# > 肯德基
+^https:\/\/orders\.kfc\.com\.cn\/preorder-portal\/api\/v2\/coupon data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+^https:\/\/dynamicad\.kfc\.com\.cn\/api data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json" header
+^https:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/custom_v2\/wxapp data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+^https:\/\/orders\.kfc\.com\.cn\/preorder-portal\/api\/v2\/activity data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+
+# > 星巴克
+^https:\/\/3pp\.starbucks\.com\.cn\/wxmem\/popup data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+^https:\/\/3pp\.starbucks\.com\.cn\/wxmem\/index\/banner data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+^https:\/\/3pp\.starbucks\.com\.cn\/wxmem\/index\/global data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+
+# > 丰巢
+^https:\/\/webchatapp\.fcbox\.com\/fcboxactivityweb\/api\/v2\/clientPage data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+^https:\/\/dsp\.fcbox\.com data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+
+# > 哈啰出行
+^https:\/\/api\.hellobike\.com\/api\?adx data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+
+# > 顺丰速运
+^https?:\/\/ucmp\.sf-express\.com\/proxy\/operation-platform\/info-flow-adver\/query$ data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
+
+# > 猫眼
+^https:\/\/vod-movie\.maoyan\.com\/vod\/video\/onlineMovies\.json data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+^https:\/\/wx\.maoyan\.com\/maoyansh\/myshow\/ajax\/movie\/wonderShow data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+^https:\/\/wx\.maoyan\.com\/maoyansh\/myshow\/ajax\/performances\/calendar\/0 data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+^https:\/\/wx\.maoyan\.com\/maoyansh\/myshow\/ajax\/performances\/rob\/main data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+^https:\/\/wx\.maoyan\.com\/maoyansh\/myshow\/ajax\/celebrityBasicList\/query data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+^https:\/\/wx\.maoyan\.com\/maoyansh\/myshow\/ajax\/recommend\/performances data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+^https:\/\/api\.maoyan\.com\/sns\/common\/feed\/channel\/v2\/list\.json data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+^https:\/\/ad\.maoyan\.com\/api\/position\/detail data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+
+# > 中国电信
+^https?:\/\/cloud\.189\.cn\/include\/splash\/ - reject
+^https?:\/\/zt-app\.go189\.cn\/zt-app\/welcome\/.*?Animation - reject
+
+# > 住这儿
+^https?:\/\/z\.onewo\.com\/passer\/api\/ads\/v1\/8\/list - reject
