@@ -1,10 +1,6 @@
 # Advertising
-# > General
+
 DOMAIN-KEYWORD,adservice
-
-# >>>>>>>>>>>>>>> ✅ # ✅ <<<<<<<<<<<<<<
-
-# 广告联盟
 DOMAIN-SUFFIX,miaozhen.com
 DOMAIN-KEYWORD,-ad-sign.byteimg.com
 DOMAIN-KEYWORD,-tos.pstatp.com
@@ -15,28 +11,14 @@ DOMAIN-KEYWORD,pglstatp-toutiao
 DOMAIN-KEYWORD,video-cn.snssdk.com
 DOMAIN-KEYWORD,volcvod.com
 DOMAIN-KEYWORD,volceapplog.com
-
-# >>>>>>>>>>>>>>> ✅ 1 ✅ <<<<<<<<<<<<<<
-
-# > 交管12123
 DOMAIN-SUFFIX,v3.fstats.xyz
 DOMAIN-SUFFIX,wss.haoyundmn.com
 DOMAIN-SUFFIX,new.xiongzhangad.com
 DOMAIN-SUFFIX,alexametrics.com
 DOMAIN-KEYWORD,in-page-push
-
-# >>>>>>>>>>>>>>> ✅ 5 ✅ <<<<<<<<<<<<<<
-
-# > 58同城
 DOMAIN,track.58.com
 DOMAIN,tracklog.58.com
-
-# >>>>>>>>>>>>>>> ✅ A ✅ <<<<<<<<<<<<<<
-
-# > Adobe Flash China Special Edition
 DOMAIN,geo2.adobe.com
-
-# > Apple
 DOMAIN,advertising.apple.com
 DOMAIN,api-adservices.apple.com
 DOMAIN,apple.comscoreresearch.com
@@ -54,7 +36,6 @@ DOMAIN,webproxy-advp.iad-apple.com
 DOMAIN,webproxy-advp.iad-apple.com.akadns.net
 DOMAIN-SUFFIX,advp.apple.com
 DOMAIN-SUFFIX,iadsdk.apple.com
-# 安全浏览限制解除
 DOMAIN,lookup.api.bsb.baidu.com
 DOMAIN,proxy.safebrowsing.apple
 DOMAIN,safebrowsing.g.applimg.com
@@ -64,11 +45,7 @@ DOMAIN,token.safebrowsing.apple
 DOMAIN,vs6.bj2ct.u3.ucweb.com
 DOMAIN-SUFFIX,safebrowsing.apple
 DOMAIN-SUFFIX,u3.ucweb.com
-
-# > 阿里云
 IP-CIDR,203.107.1.1/24
-
-# > 爱奇艺
 DOMAIN,api.iqiyi.com
 DOMAIN,cr-status.iqiyi.com
 DOMAIN,f74f7f7765f8a2f6.ngaa.net.cn
@@ -114,12 +91,6 @@ IP-CIDR,101.227.97.240/32
 IP-CIDR,101.227.200.11/32
 IP-CIDR,101.227.200.28/32
 IP-CIDR,124.192.153.42/32
-
-
-
-# >>>>>>>>>>>>>>> ✅ B ✅ <<<<<<<<<<<<<<
-
-# > 百度
 DOMAIN-SUFFIX,duapps.com
 DOMAIN-SUFFIX,cpro.baidu.com
 DOMAIN-SUFFIX,pos.baidu.com
@@ -268,32 +239,18 @@ DOMAIN-SUFFIX,mobads-logs.baidu.com
 DOMAIN-SUFFIX,nsclick.baidu.com
 DOMAIN,hm.baidu.com
 DOMAIN,hmma.baidu.com
-# 百度地图
 DOMAIN,afd.baidu.com
 DOMAIN,afdconf.baidu.com
 DOMAIN,httpdns.baidubce.com
 DOMAIN,lc.map.baidu.com
-
-# > 百度贴吧 屏蔽域名dns查询
 IP-CIDR,180.76.76.200/32
-
-# > 哔哩哔哩
-;DOMAIN,mall.bilibili.com
-;DOMAIN,passport.bilibili.com
 DOMAIN-KEYWORD,api.sobot.com
 DOMAIN-SUFFIX,cm.ad.bilibili.com
 DOMAIN-SUFFIX,cm.adcommon.bilibili.com
 DOMAIN-SUFFIX,cm.game.bilibili.com
 DOMAIN-SUFFIX,cm.track.biligame.bilibili.com
-
-# > 百词斩
 DOMAIN,advertise.baicizhan.com
 DOMAIN,advertise.baicizhan.org
-
-# >>>>>>>>>>>>>>> ✅ C ✅ <<<<<<<<<<<<<<
-
-# > C&J Marketing
-# https://www.zhihu.com/question/46746200
 DOMAIN-SUFFIX,alienskins.cn
 DOMAIN-SUFFIX,anydeskchina.cn
 DOMAIN-SUFFIX,betterzipcn.com
@@ -308,38 +265,18 @@ DOMAIN-SUFFIX,mindmanager.cn
 DOMAIN-SUFFIX,officesoftcn.com
 DOMAIN-SUFFIX,photozoomchina.com
 DOMAIN-SUFFIX,xitongqingli.com
-
-# > Camera360
 DOMAIN,dispatcher.360in.com
 DOMAIN,ad.360in.com
 DOMAIN,exp.360in.com
-
-# >>>>>>>>>>>>>>> ✅ D ✅ <<<<<<<<<<<<<<
-
-# > 懂车帝
 DOMAIN-KEYWORD,p3-pack.byteimg.com
 DOMAIN-KEYWORD,p6-pack.byteimg.com
-
-# > 懂球帝
 DOMAIN-KEYWORD,apimg.qunliao.info
-
-# > 抖音
 DOMAIN-KEYWORD,bds.snssdk.com
 DOMAIN-KEYWORD,p3.pstatp.com
-
-# >>>>>>>>>>>>>>> ✅ F ✅ <<<<<<<<<<<<<<
-
-# > 凤凰新媒体
 DOMAIN-SUFFIX,deliver.ifeng.com
 DOMAIN,api.newad.ifeng.com
 DOMAIN,ifengad.3g.ifeng.com
-
-# >>>>>>>>>>>>>>> ✅ G ✅ <<<<<<<<<<<<<<
-
-# > 光大银行阳光惠生活
 DOMAIN-KEYWORD,talk.bz.getui.com
-
-# > 谷歌
 DOMAIN-SUFFIX,google-analytics.com
 DOMAIN,safebrowsing.googleapis.com
 DOMAIN-SUFFIX,doubleclick.net
@@ -363,9 +300,6 @@ DOMAIN-SUFFIX,afd.l.google.com
 DOMAIN-SUFFIX,www.googleadservices.com
 DOMAIN-SUFFIX,www.google-analytics.com
 DOMAIN,ads.youtube.com
-
-# > 高德
-;DOMAIN,restapi.amap.com
 DOMAIN-SUFFIX,adiu.amap.com
 DOMAIN,aboard.apilocate.amap.com
 DOMAIN,apiinit.amap.com
@@ -380,30 +314,15 @@ DOMAIN,optimus-ads.amap.com.w.alikunlun.com
 DOMAIN-SUFFIX,shouji.sougou.com
 DOMAIN,u51.me
 DOMAIN-SUFFIX,u51.me
-
-# > 广州地铁乘车码
-# 多个广告 感谢CtrlMusic🐓分享
 DOMAIN,apis.alenable.com
-
-
-
-# >>>>>>>>>>>>>>> ✅ H ✅ <<<<<<<<<<<<<<
-
-# > 虎扑
 DOMAIN,adx.hupu.com
 DOMAIN,adx-api.hupu.com
 DOMAIN,goblin.hupu.com
-
-# > 虎牙直播 开屏广告
 DOMAIN,pp-cdnfile2pcdn.msstatic.com
 DOMAIN,livewebbs2pcdn.msstatic.com
 DOMAIN,huyafile.msstatic.com
 DOMAIN,livewebbs2.msstatic.com
 DOMAIN,business.msstatic.com
-
-# >>>>>>>>>>>>>>> ✅ J ✅ <<<<<<<<<<<<<<
-
-# > 今日头条
 DOMAIN,dm.toutiao.com
 DOMAIN-KEYWORD,ad.toutiao.com
 DOMAIN-KEYWORD,clk.gentags.net
@@ -422,8 +341,6 @@ DOMAIN-KEYWORD,a3.bytecdn.cn
 ;DOMAIN-KEYWORD,ichannel.snssdk.com
 DOMAIN,ad.toutiao.com
 DOMAIN,dsp.toutiao.com
-
-# > 京东
 DOMAIN-SUFFIX,jzt.jd.com
 DOMAIN-SUFFIX,img-x.jd.com
 DOMAIN-SUFFIX,du.jd.com
@@ -434,22 +351,10 @@ DOMAIN-KEYWORD,kepler.jd.com
 DOMAIN-KEYWORD,bdsp.x.jd.com
 DOMAIN-KEYWORD,keplerapi.jd.com
 DOMAIN-KEYWORD,mapi.m.jd.com
-# 屏蔽DNS
 DOMAIN,dns.jd.com
 IP-CIDR,101.124.19.122/32
-IP6-CIDR, 2402:db40:5100:1011::5/128
-
-
-
-# >>>>>>>>>>>>>>> ✅ K ✅ <<<<<<<<<<<<<<
-
-# > keep
 DOMAIN,apm.gotokeep.com
 DOMAIN,kad.gotokeep.com
-
-# >>>>>>>>>>>>>>> ✅ M ✅ <<<<<<<<<<<<<<
-
-# > 美团
 DOMAIN,flowplus.meituan.net
 DOMAIN-SUFFIX,analytics.meituan.net
 DOMAIN-SUFFIX,meituan.xn--io0a7i
@@ -457,34 +362,16 @@ DOMAIN-SUFFIX,meituan.yoga
 DOMAIN-SUFFIX,meituangov.cn
 DOMAIN-SUFFIX,report.meituan.com
 DOMAIN-SUFFIX,wmlog.meituan.com
-
-# > 买单吧
 DOMAIN-KEYWORD,c-hzgt2.getui.com
-
-# > 民生银行
 DOMAIN-KEYWORD,cm-10-134.getui.com
 DOMAIN-KEYWORD,sdk.open.talk.getui.com
 DOMAIN-KEYWORD,cm-10-35.getui.com
 DOMAIN-KEYWORD,c-hzgt2.getui.com
 DOMAIN-SUFFIX,sdk.open.talk.igexin.com
-
-# > 小米米家
 DOMAIN,sdkconfig.ad.xiaomi.com
-
-# >>>>>>>>>>>>>>> ✅ N ✅ <<<<<<<<<<<<<<
-
-# >>>>>>>>>>>>>>> ✅ O ✅ <<<<<<<<<<<<<<
-
-# > Outlook
 DOMAIN,acdn.adnxs.com
 DOMAIN,mediation.adnxs.com
 DOMAIN,sin3-ib.adnxs.com
-
-# >>>>>>>>>>>>>>> ✅ P ✅ <<<<<<<<<<<<<<
-
-# >>>>>>>>>>>>>>> ✅ Q ✅ <<<<<<<<<<<<<<
-
-# > 汽车之家
 DOMAIN-KEYWORD,adm3.autoimg.cn
 ;DOMAIN-KEYWORD,audid-api.taobao.com
 DOMAIN-KEYWORD,collectionpv.che168.com
@@ -498,31 +385,13 @@ DOMAIN,adm0.autoimg.cn
 DOMAIN,adm1.autoimg.cn
 DOMAIN,adm2.autoimg.cn
 DOMAIN,adm3.autoimg.cn
-
-# >>>>>>>>>>>>>>> ✅ R ✅ <<<<<<<<<<<<<<
-
-# >>>>>>>>>>>>>>> ✅ S ✅ <<<<<<<<<<<<<<
-
-# > soul
 DOMAIN,soul-ad.soulapp.cn
 DOMAIN,ad-r.soulapp.cn
 DOMAIN-SUFFIX,cdn.soulapp.cn
-
-# > Snapchat
 DOMAIN,ads.snapchat.com
 DOMAIN,adsapi.snapchat.com
-
-# > 深圳通微信小程序
 DOMAIN-SUFFIX,wxsnsdythumb.wxs.qq.com
-
-# > 收钱吧 买单小程序去广告
 DOMAIN,ads-shopping.shouqianba.com
-
-
-
-# >>>>>>>>>>>>>>> ✅ T ✅ <<<<<<<<<<<<<<
-
-# > 淘宝
 DOMAIN-SUFFIX,apoll.m.taobao.com
 DOMAIN-SUFFIX,h-adashx.ut.taobao.com
 DOMAIN-SUFFIX,w.m.taobao.com
@@ -556,8 +425,6 @@ DOMAIN-SUFFIX,click.tz.simba.taobao.com
 DOMAIN-SUFFIX,stat.simba.taobao.com
 DOMAIN-SUFFIX,m-adash.m.taobao.com
 DOMAIN-SUFFIX,adashbc.m.taobao.com
-
-# >  腾讯
 DOMAIN-SUFFIX,news.ssp.qq.com
 DOMAIN-SUFFIX,news.l.qq.com
 DOMAIN-SUFFIX,activeqq.3g.qq.com
@@ -656,14 +523,6 @@ DOMAIN,vv.video.qq.com
 DOMAIN,wa.gtimg.com
 DOMAIN,wxsnsdy.wxs.qq.com
 DOMAIN,wxsmsdy.video.qq.com
-
-# >>>>>>>>>>>>>>> ✅ U ✅ <<<<<<<<<<<<<<
-
-# >>>>>>>>>>>>>>> ✅ V ✅ <<<<<<<<<<<<<<
-
-# >>>>>>>>>>>>>>> ✅ W ✅ <<<<<<<<<<<<<<
-
-# > 微博
 DOMAIN-KEYWORD,fastimage.uve.weibo.com
 DOMAIN-KEYWORD,adimg.uve.weibo.com
 DOMAIN-SUFFIX,adimg.vue.weibo.com
@@ -714,12 +573,8 @@ DOMAIN-KEYWORD,tui.weibo.com
 DOMAIN-KEYWORD,wax.weibo.com.cn
 DOMAIN-KEYWORD,ad.weibo.com
 DOMAIN-KEYWORD,adstrategy.biz.weibo.com
-;DOMAIN-KEYWORD,s.weibo.com
 DOMAIN-KEYWORD,vs.biz.weibo.com
-# 微博开屏广告预加载
 DOMAIN,bootpreload.uve.weibo.com
-
-# > 网易
 DOMAIN-SUFFIX,dsp.youdao.com
 DOMAIN-SUFFIX,union.youdao.com
 DOMAIN,ad.bn.netease.com
@@ -737,43 +592,25 @@ DOMAIN,n.3g.163.com
 DOMAIN,nex.163.com
 DOMAIN,yt-adp.nosdn.127.net
 DOMAIN,yt-adp.ws.126.net
-
-# > 网易云
 DOMAIN-KEYWORD,ossgw.alicdn.com
-
-# > 微软
 DOMAIN-SUFFIX,ads.msn.com
 DOMAIN-SUFFIX,ads1.msn.com
 DOMAIN-SUFFIX,ads2.msn.com
 DOMAIN-SUFFIX,bingads.microsoft.com
 DOMAIN-SUFFIX,rads.msn.com
 DOMAIN,mobileads.msn.com
-
-# >>>>>>>>>>>>>>> ✅ X ✅ <<<<<<<<<<<<<<
-
-# > 小红书
 DOMAIN,ads-img-qc.xhscdn.com
 DOMAIN,ads-video-al.xhscdn.com
 DOMAIN,ads-video-qc.xhscdn.com
 DOMAIN,t-ads.xiaohongshu.com
-
-# > 小米
 DOMAIN,data.mistat.xiaomi.com
 DOMAIN,tracking.intl.miui.com
-
-# >>>>>>>>>>>>>>> ✅ Y ✅ <<<<<<<<<<<<<<
-
-# > 云闪付
 DOMAIN,ads.95516.com
 DOMAIN,cm-10-138.getui.com
 DOMAIN,sdk.open.talk.getui.net
 DOMAIN,sdk-conf.getui.com
 DOMAIN,switch.cup.com.cn
 DOMAIN,tysdk.95516.com
-
-# >>>>>>>>>>>>>>> ✅ Z ✅ <<<<<<<<<<<<<<
-
-# > 知乎
 USER-AGENT,AVOS*
 DOMAIN,appcloud.zhihu.com
 DOMAIN,appcloud2.in.zhihu.com
@@ -783,41 +620,25 @@ DOMAIN,crash2.zhihu.com
 DOMAIN,118.89.204.198
 IP-CIDR,118.89.204.198/32
 IP6-CIDR,2402:4e00:1200:ed00:0:9089:6dac:96b6/128
-
-# > 中国移动
 IP-CIDR,120.240.95.37/32
-
-# > 中国联通
 DOMAIN-SUFFIX,m1.ad.10010.com
-
-# > 中国电信
 DOMAIN,ad.21cn.com
 DOMAIN,ad.k.21cn.com
 DOMAIN,admarket.21cn.com
 DOMAIN,adshows.21cn.com
 IP-CIDR,122.229.8.47/32
 IP-CIDR,122.229.29.89/32
-
-# > 中信银行
 DOMAIN-SUFFIX,sis.jpush.io
 DOMAIN-SUFFIX,s.jpush.cn
 DOMAIN-SUFFIX,jpush.cn
 DOMAIN-SUFFIX,im64.jpush.cn
 DOMAIN-SUFFIX,im.jpush.cn
 DOMAIN-SUFFIX,jpush.html5.qq.com
-
-# > 字节跳动
 DOMAIN,ad.zijieapi.com
 DOMAIN-SUFFIX,-normal-lq.zijieapi.com
 DOMAIN-KEYWORD,ad-sign.byteimg.com
-
-
-
-# >>>>>>>>>>>>>>> ✅ 其他广告 ✅ <<<<<<<<<<<<<<
-
 DOMAIN-KEYWORD,huichuan-mc.sm.cn
 DOMAIN-KEYWORD,extlog.snssdk.com
-;DOMAIN-KEYWORD,is.snssdk.com
 DOMAIN-KEYWORD,mobads.baidu.com
 DOMAIN-KEYWORD,s3a.pstatp.com
 DOMAIN-KEYWORD,sdfp.snssdk.com
@@ -920,7 +741,6 @@ DOMAIN-KEYWORD,dlads
 DOMAIN,dagonghuzhu.com
 DOMAIN-KEYWORD,xxshuyuan
 DOMAIN-KEYWORD,haowanyou
-;DOMAIN-KEYWORD,dat8
 DOMAIN-KEYWORD,112wan
 DOMAIN-KEYWORD,dfkj8
 DOMAIN-KEYWORD,mifengv
@@ -971,7 +791,6 @@ DOMAIN-KEYWORD,bongacash
 DOMAIN-KEYWORD,bngpt
 DOMAIN-KEYWORD,stunninglover
 DOMAIN-KEYWORD,highwebmedia
-;DOMAIN-KEYWORD,jads
 DOMAIN-KEYWORD,trwl1
 DOMAIN-KEYWORD,vidoza
 DOMAIN-KEYWORD,o333o
@@ -9142,8 +8961,6 @@ IP-CIDR,211.161.101.106/32
 IP-CIDR,220.115.251.25/32
 IP-CIDR,222.73.156.235/32
 IP-CIDR,203.107.1.1/24
-
-# > 运营商劫持
 DOMAIN-SUFFIX,189key.com
 DOMAIN-SUFFIX,bkyhq.cn
 DOMAIN-SUFFIX,gscxs.cn
@@ -9159,8 +8976,6 @@ DOMAIN-SUFFIX,wsgblw.com
 DOMAIN-SUFFIX,xchmai.com
 DOMAIN-SUFFIX,ygyzx.cn
 DOMAIN-SUFFIX,zmlled.cn
-
-# > 隐私保护
 DOMAIN-SUFFIX,airpr.com
 DOMAIN-SUFFIX,hotjar.com
 DOMAIN-SUFFIX,hotjar.io
