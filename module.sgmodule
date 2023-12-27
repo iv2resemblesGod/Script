@@ -4,7 +4,7 @@
 
 [MITM]
 
-hostname = %APPEND% webappcfg.paas.cmbchina.com, az*mbasecc.bas.cmbchina.com, intellicc.bas.cmbchina.com, wap.bank.ecitic.com, imcs.citicbank.com, ios-*.prod.ftl.netflix.com, ios.prod.ftl.netflix.com, api.m.jd.com, m.baidu.com, boxer.baidu.com, www.baidu.com, api.tipsoon.com, api-production.endel.io, biz.cyapi.cn, wrapper.cyapi.cn, orders.kfc.com.cn, dynamicad.kfc.com.cn, res.kfc.com.cn, res.pizzahut.com, 3pp.starbucks.com.cn, webchatapp.fcbox.com, dsp.fcbox.com, api.hellobike.com, ucmp.sf-express.com, vod-movie.maoyan.com, api.maoyan.com, ad.maoyan.com, wx.maoyan.com, h5.youzan.com, mcs-mimp-web.sf-express.com, ucmp-static.sf-express.com, ucmp.sf-express.com, member.alipan.com, asia-east2-slidebox-ios-prod.cloudfunctions.net, api.polaxiong.com, mobile.flightradar24.com, cloud.189.cn, zt-app.go189.cn, miniapp.sexytea2013.com, my.getslopes.com, apis.folidaymall.com, api.revenuecat.com
+hostname = %APPEND% webappcfg.paas.cmbchina.com, az*mbasecc.bas.cmbchina.com, intellicc.bas.cmbchina.com, wap.bank.ecitic.com, imcs.citicbank.com, ios-*.prod.ftl.netflix.com, ios.prod.ftl.netflix.com, api.m.jd.com, m.baidu.com, boxer.baidu.com, www.baidu.com, api.tipsoon.com, api-production.endel.io, biz.cyapi.cn, wrapper.cyapi.cn, orders.kfc.com.cn, dynamicad.kfc.com.cn, res.kfc.com.cn, res.pizzahut.com, 3pp.starbucks.com.cn, webchatapp.fcbox.com, dsp.fcbox.com, api.hellobike.com, ucmp.sf-express.com, vod-movie.maoyan.com, api.maoyan.com, ad.maoyan.com, wx.maoyan.com, h5.youzan.com, mcs-mimp-web.sf-express.com, ucmp-static.sf-express.com, ucmp.sf-express.com, asia-east2-slidebox-ios-prod.cloudfunctions.net, api.polaxiong.com, mobile.flightradar24.com, cloud.189.cn, zt-app.go189.cn, miniapp.sexytea2013.com, my.getslopes.com, apis.folidaymall.com, api.revenuecat.com
 
 [Map Local]
 
@@ -66,9 +66,6 @@ ThomasCook = type=http-request,pattern=^https:\/\/apis\.folidaymall\.com\/online
 阿里云盘签到cookie = requires-body=1,type=http-response,pattern=https:\/\/auth.(aliyundrive|alipan).com\/v2\/account\/token,script-path=https://raw.githubusercontent.com/lowking/Scripts/master/ali/aliYunPanCheckIn.js
 
 [URL Rewrite]
-
-# > 阿里云盘
-^https:\/\/member\.alipan\.com\/v2\/activity\/sign_in_info - reject
 
 # > Bilibili
 (?=.*(hdslb\.com.*(\.zip|\.mp4)))^((?!(hdslb\.com\/bfs\/app-static\/)).)*$ - reject
