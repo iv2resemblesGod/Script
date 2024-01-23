@@ -4,7 +4,7 @@
 
 [MITM]
 
-hostname = %APPEND% api.lianjiu.fun, webappcfg.paas.cmbchina.com, az*mbasecc.bas.cmbchina.com, intellicc.bas.cmbchina.com, wap.bank.ecitic.com, imcs.citicbank.com, ios-*.prod.ftl.netflix.com, ios.prod.ftl.netflix.com, api.m.jd.com, m.baidu.com, boxer.baidu.com, www.baidu.com, api.tipsoon.com, api-production.endel.io, biz.cyapi.cn, wrapper.cyapi.cn, orders.kfc.com.cn, dynamicad.kfc.com.cn, res.kfc.com.cn, res.pizzahut.com, 3pp.starbucks.com.cn, webchatapp.fcbox.com, dsp.fcbox.com, api.hellobike.com, ucmp.sf-express.com, vod-movie.maoyan.com, api.maoyan.com, ad.maoyan.com, wx.maoyan.com, h5.youzan.com, mcs-mimp-web.sf-express.com, ucmp-static.sf-express.com, ucmp.sf-express.com, asia-east2-slidebox-ios-prod.cloudfunctions.net, api.polaxiong.com, mobile.flightradar24.com, cloud.189.cn, zt-app.go189.cn, miniapp.sexytea2013.com, my.getslopes.com, apis.folidaymall.com, api.revenuecat.com
+hostname = %APPEND% api.lianjiu.fun, ios-*.prod.ftl.netflix.com, ios.prod.ftl.netflix.com, api.m.jd.com, m.baidu.com, boxer.baidu.com, www.baidu.com, api.tipsoon.com, api-production.endel.io, biz.cyapi.cn, wrapper.cyapi.cn, orders.kfc.com.cn, dynamicad.kfc.com.cn, res.kfc.com.cn, res.pizzahut.com, 3pp.starbucks.com.cn, webchatapp.fcbox.com, dsp.fcbox.com, api.hellobike.com, ucmp.sf-express.com, vod-movie.maoyan.com, api.maoyan.com, ad.maoyan.com, wx.maoyan.com, h5.youzan.com, mcs-mimp-web.sf-express.com, ucmp-static.sf-express.com, ucmp.sf-express.com, asia-east2-slidebox-ios-prod.cloudfunctions.net, api.polaxiong.com, mobile.flightradar24.com, miniapp.sexytea2013.com, my.getslopes.com, apis.folidaymall.com, api.revenuecat.com
 
 [Map Local]
 
@@ -107,25 +107,4 @@ ThomasCook = type=http-request,pattern=^https:\/\/apis\.folidaymall\.com\/online
 ^https:\/\/wx\.maoyan\.com\/maoyansh\/myshow\/ajax\/recommend\/performances data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 ^https:\/\/api\.maoyan\.com\/sns\/common\/feed\/channel\/v2\/list\.json data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 ^https:\/\/ad\.maoyan\.com\/api\/position\/detail data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
-
-# > 中国电信
-^https?:\/\/cloud\.189\.cn\/include\/splash\/ - reject
-^https?:\/\/zt-app\.go189\.cn\/zt-app\/welcome\/.*?Animation - reject
-
-# > 招商银行
-# 开屏广告
-^https?:\/\/webappcfg\.paas\.cmbchina\.com\/v\d\/func\/getmarketconfig - reject
-# 首页横幅广告
-^https:\/\/mbmodule-openapi\.paas\.cmbchina\.com\/graphic\/v2\/module\/graphic - reject
-
-# > 掌上生活
-# 开屏广告
-^https:\/\/az\dmbasecc\.bas\.cmbchina\.com\/Edge\/api\/mlife\.clientface\.clientservice\.api\.advertiseService\/preCacheAdvertiseSec - reject
-# 设置栏目内广告
-^https?:\/\/intellicc\.bas\.cmbchina\.com\/Edge\/api\/mlife\.intelli\.render\.api\.render\/getDynamicDataSec - reject
-
-# > 中信银行
-^https?:\/\/wap.bank\.ecitic\.com:6443\/NMBFOServer\/cbframework\.do\?act=CUBEPAGEDATA - reject
-# 开屏广告
-^https:\/\/imcs\.citicbank\.com\/cloud\/.+(1125.+2436|1242.+2688|750.+1638|563.+1218) - reject
 
