@@ -4,7 +4,7 @@
 
 [MITM]
 
-hostname = %APPEND% ios-*.prod.ftl.netflix.com, ios.prod.ftl.netflix.com, api.m.jd.com, m.baidu.com, boxer.baidu.com, www.baidu.com, api-production.endel.io, biz.cyapi.cn, wrapper.cyapi.cn, ucmp.sf-express.com, asia-east2-slidebox-ios-prod.cloudfunctions.net, api.polaxiong.com, mobile.flightradar24.com, miniapp.sexytea2013.com, my.getslopes.com, apis.folidaymall.com, api.revenuecat.com
+hostname = %APPEND% ios-*.prod.ftl.netflix.com, ios.prod.ftl.netflix.com, api.m.jd.com, m.baidu.com, boxer.baidu.com, www.baidu.com, biz.cyapi.cn, wrapper.cyapi.cn, ucmp.sf-express.com, asia-east2-slidebox-ios-prod.cloudfunctions.net, api.polaxiong.com, mobile.flightradar24.com, miniapp.sexytea2013.com, my.getslopes.com, apis.folidaymall.com, api.revenuecat.com
 
 [Map Local]
 
@@ -19,9 +19,6 @@ hostname = %APPEND% ios-*.prod.ftl.netflix.com, ios.prod.ftl.netflix.com, api.m.
 
 # baiduNoRedirect
 baiduNoRedirect = type=http-response,pattern=^https:\/\/boxer\.baidu\.com\/scheme\?scheme,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/baiduNoRedirect.js, timeout=60
-
-# Endel
-Endel = type=http-response,pattern=^https?:\/\/api-production\.endel\.io\/v\d\/call,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/Endel.js
 
 # 彩云天气
 #彩云天气 = type=http-response,pattern=^https:\/\/biz\.cyapi\.cn\/(p\/v1\/vip_info|v2\/user),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/caiyun.js
