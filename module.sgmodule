@@ -4,7 +4,7 @@
 
 [MITM]
 
-hostname = %APPEND% ios-*.prod.ftl.netflix.com, ios.prod.ftl.netflix.com, api.m.jd.com, m.baidu.com, boxer.baidu.com, www.baidu.com, biz.cyapi.cn, wrapper.cyapi.cn, ucmp.sf-express.com, asia-east2-slidebox-ios-prod.cloudfunctions.net, api.polaxiong.com, miniapp.sexytea2013.com, my.getslopes.com, apis.folidaymall.com
+hostname = %APPEND% ios-*.prod.ftl.netflix.com, ios.prod.ftl.netflix.com, api.m.jd.com, m.baidu.com, boxer.baidu.com, www.baidu.com, biz.cyapi.cn, wrapper.cyapi.cn, asia-east2-slidebox-ios-prod.cloudfunctions.net, api.polaxiong.com, miniapp.sexytea2013.com, my.getslopes.com, apis.folidaymall.com
 
 [Map Local]
 
@@ -57,8 +57,5 @@ ThomasCook = type=http-request,pattern=^https:\/\/apis\.folidaymall\.com\/online
 # > Bilibili
 (?=.*(hdslb\.com.*(\.zip|\.mp4)))^((?!(hdslb\.com\/bfs\/app-static\/)).)*$ - reject
 (?=resource\?resourceUrl|upos\-sz\-staticcos) - reject
-
-# > 顺丰速运
-^https?:\/\/ucmp\.sf-express\.com\/proxy\/operation-platform\/info-flow-adver\/query$ data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
 
 
