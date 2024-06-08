@@ -4,7 +4,7 @@
 
 [MITM]
 
-hostname = %APPEND% ios-*.prod.ftl.netflix.com, ios.prod.ftl.netflix.com, api.m.jd.com, m.baidu.com, boxer.baidu.com, www.baidu.com, biz.cyapi.cn, wrapper.cyapi.cn, ucmp.sf-express.com, asia-east2-slidebox-ios-prod.cloudfunctions.net, api.polaxiong.com, mobile.flightradar24.com, miniapp.sexytea2013.com, my.getslopes.com, apis.folidaymall.com
+hostname = %APPEND% ios-*.prod.ftl.netflix.com, ios.prod.ftl.netflix.com, api.m.jd.com, m.baidu.com, boxer.baidu.com, www.baidu.com, biz.cyapi.cn, wrapper.cyapi.cn, ucmp.sf-express.com, asia-east2-slidebox-ios-prod.cloudfunctions.net, api.polaxiong.com, miniapp.sexytea2013.com, my.getslopes.com, apis.folidaymall.com
 
 [Map Local]
 
@@ -36,9 +36,6 @@ baiduNoRedirect = type=http-response,pattern=^https:\/\/boxer\.baidu\.com\/schem
 
 # Slidebox
 Slidebox = type=http-response,pattern=^https:\/\/asia-east2-slidebox-ios-prod\.cloudfunctions\.net\/api_v1$,requires-body=true,max-size=3145728,timeout=60,script-path=https://raw.githubusercontent.com/wf021325/qx/master/js/slidebox.js,script-update-interval=0
-
-# Flightradar24
-Flightradar24 = type=http-response,pattern=^https:\/\/mobile\.flightradar24\.com\/mobile\/(user-session|subscribe),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/Flightradar24.js,script-update-interval=0
 
 # Polarr
 Polarr = type=http-response,pattern=^https?:\/\/api\.polaxiong\.com\/.+\/payments\/(profiles\/.+\/subscription|appleiap\/receipts\/confirmation),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/pola.js,script-update-interval=0
