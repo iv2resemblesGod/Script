@@ -4,7 +4,7 @@
 
 [MITM]
 
-hostname = %APPEND% ios-*.prod.ftl.netflix.com, ios.prod.ftl.netflix.com, api.m.jd.com, m.baidu.com, boxer.baidu.com, www.baidu.com, biz.cyapi.cn, wrapper.cyapi.cn, asia-east2-slidebox-ios-prod.cloudfunctions.net, api.polaxiong.com, miniapp.sexytea2013.com, my.getslopes.com, apis.folidaymall.com
+hostname = %APPEND% m.baidu.com, boxer.baidu.com, www.baidu.com, biz.cyapi.cn, wrapper.cyapi.cn, asia-east2-slidebox-ios-prod.cloudfunctions.net, api.polaxiong.com, miniapp.sexytea2013.com, cn.tradingview.com, my.getslopes.com, apis.folidaymall.com
 
 [Map Local]
 
@@ -27,13 +27,6 @@ baiduNoRedirect = type=http-response,pattern=^https:\/\/boxer\.baidu\.com\/schem
 # 茶颜悦色
 茶颜悦色 = type=http-response,pattern=^https:\/\/miniapp\.sexytea2013\.com\/cms\/slot\/queryByCodes\?codes=INDEX_TOP_BANNER,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cyys.js,script-update-interval=0
 
-# 京东比价
-京东比价 = type=http-response,requires-body=1,pattern=^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig),script-path=https://raw.githubusercontent.com/Keywos/Rule/main/JS/Jdbj.js
-
-# 奈飞评分
-奈飞评分 = type=http-request,pattern=^https?:\/\/ios(-.*)?\.prod\.ftl\.netflix\.com\/iosui\/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js
-奈飞评分 = type=http-response,requires-body=1,pattern=^https?:\/\/ios(-.*)?\.prod\.ftl\.netflix\.com\/iosui\/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js
-
 # Slidebox
 Slidebox = type=http-response,pattern=^https:\/\/asia-east2-slidebox-ios-prod\.cloudfunctions\.net\/api_v1$,requires-body=true,max-size=3145728,timeout=60,script-path=https://raw.githubusercontent.com/wf021325/qx/master/js/slidebox.js,script-update-interval=0
 
@@ -42,6 +35,9 @@ Polarr = type=http-response,pattern=^https?:\/\/api\.polaxiong\.com\/.+\/payment
 
 # Slopes
 Slopes = type=http-response,pattern=https://my.getslopes.com/api/v2/account,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/Slopes.js,script-update-interval=0
+
+# Tradingview
+TradingView = type=http-response,pattern=https://cn.tradingview.com/api/v1/user/profile/me/,requires-body=1,max-size=0,binary-body-mode=0,script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/TradingView.js,script-update-interval=0
 
 # ThomasCook
 ThomasCook = type=cron,cronexp=15 10 * * *,timeout=60,script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/ThomasCook.js,script-update-interval=0
