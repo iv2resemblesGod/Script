@@ -48,10 +48,4 @@ ThomasCook = type=http-request,pattern=^https:\/\/apis\.folidaymall\.com\/online
 
 阿里云盘签到cookie = requires-body=1,type=http-response,pattern=https:\/\/auth.(aliyundrive|alipan).com\/v2\/account\/token,script-path=https://raw.githubusercontent.com/lowking/Scripts/master/ali/aliYunPanCheckIn.js
 
-[URL Rewrite]
-
-# > Bilibili
-(?=.*(hdslb\.com.*(\.zip|\.mp4)))^((?!(hdslb\.com\/bfs\/app-static\/)).)*$ - reject
-(?=resource\?resourceUrl|upos\-sz\-staticcos) - reject
-
 
