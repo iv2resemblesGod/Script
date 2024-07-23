@@ -4,25 +4,17 @@
 
 [MITM]
 
-hostname = %APPEND% m.baidu.com, boxer.baidu.com, www.baidu.com, biz.cyapi.cn, wrapper.cyapi.cn, asia-east2-slidebox-ios-prod.cloudfunctions.net, api.polaxiong.com, miniapp.sexytea2013.com, cn.tradingview.com, my.getslopes.com, apis.folidaymall.com
+hostname = %APPEND% m.baidu.com, boxer.baidu.com, www.baidu.com, asia-east2-slidebox-ios-prod.cloudfunctions.net, api.polaxiong.com, miniapp.sexytea2013.com, cn.tradingview.com, my.getslopes.com, apis.folidaymall.com
 
 [Map Local]
 
 # 百度搜索
 ^https?:\/\/(www|m)\.baidu\.com\/?($|\?(from=\w{8,9}|tn=&from=)) data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/baidu.html" header="Content-Type: text/html; charset=utf-8"
 
-# 彩云天气
-#^https:\/\/api\.caiyunapp\.com\/v1\/activity\? data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
-#^https:\/\/wrapper\.cyapi\.cn\/v1\/activity\? data="https://raw.githubusercontent.com/axcsz/Collect/master/Script/sichuandianxinshouye.json"
-
 [Script]
 
 # baiduNoRedirect
 baiduNoRedirect = type=http-response,pattern=^https:\/\/boxer\.baidu\.com\/scheme\?scheme,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/baiduNoRedirect.js, timeout=60
-
-# 彩云天气
-#彩云天气 = type=http-response,pattern=^https:\/\/biz\.cyapi\.cn\/(p\/v1\/vip_info|v2\/user),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/caiyun.js
-#彩云云图 = type=http-request,pattern=^https:\/\/wrapper\.cyapi\.cn\/v1\/(satellite|nafp\/origin_images),requires-body=0,script-path=https://raw.githubusercontent.com/wf021325/qx/master/js/caiyun.js,script-update-interval=0
 
 # 茶颜悦色
 茶颜悦色 = type=http-response,pattern=^https:\/\/miniapp\.sexytea2013\.com\/cms\/slot\/queryByCodes\?codes=INDEX_TOP_BANNER,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cyys.js,script-update-interval=0
