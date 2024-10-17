@@ -16,15 +16,8 @@ hostname = %APPEND% m.baidu.com, boxer.baidu.com, www.baidu.com, asia-east2-slid
 # baiduNoRedirect
 baiduNoRedirect = type=http-response,pattern=^https:\/\/boxer\.baidu\.com\/scheme\?scheme,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/baiduNoRedirect.js, timeout=60
 
-# Slidebox
+># Slidebox
 Slidebox = type=http-response,pattern=^https:\/\/asia-east2-slidebox-ios-prod\.cloudfunctions\.net\/api_v1$,requires-body=true,max-size=3145728,timeout=60,script-path=https://raw.githubusercontent.com/wf021325/qx/master/js/slidebox.js,script-update-interval=0
 
-# Polarr
+># Polarr
 Polarr = type=http-response,pattern=^https?:\/\/api\.polaxiong\.com\/.+\/payments\/(profiles\/.+\/subscription|appleiap\/receipts\/confirmation),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/pola.js,script-update-interval=0
-
-# 阿里云盘签到
-阿里云盘签到 = type=cron,cronexp=0 10 0 * * ?,wake-system=1,script-path=https://raw.githubusercontent.com/lowking/Scripts/master/ali/aliYunPanCheckIn.js
-
-阿里云盘签到cookie = requires-body=1,type=http-response,pattern=https:\/\/auth.(aliyundrive|alipan).com\/v2\/account\/token,script-path=https://raw.githubusercontent.com/lowking/Scripts/master/ali/aliYunPanCheckIn.js
-
-
